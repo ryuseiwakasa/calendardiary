@@ -1,0 +1,100 @@
+.diary-editor {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.no-selection {
+  text-align: center;
+  color: #999;
+  padding: 40px;
+  font-size: 1.1em;
+}
+
+.editor-header {
+  margin-bottom: 15px;
+  border-bottom: 2px solid #667eea;
+  padding-bottom: 10px;
+}
+
+.editor-header h3 {
+  margin: 0;
+  color: #333;
+  font-size: 1.3em;
+}
+
+.diary-textarea {
+  width: 100%;
+  min-height: 200px;
+  padding: 15px;
+  border: 2px solid #e9ecef;
+  border-radius: 8px;
+  font-size: 1em;
+  font-family: inherit;
+  resize: vertical;
+  margin-bottom: 15px;
+  transition: border-color 0.3s;
+}
+
+.diary-textarea:focus {
+  outline: none;
+  border-color: #667eea;
+}
+
+.editor-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: auto;
+  padding-top: 15px;
+}
+
+.save-button,
+.delete-button {
+  flex: 1;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-weight: bold;
+}
+
+.save-button {
+  background: #48bb78;
+  color: white;
+}
+
+.save-button:hover {
+  background: #38a169;
+  transform: translateY(-2px);
+}
+
+.delete-button {
+  background: #e74c3c;
+  color: white;
+}
+
+.delete-button:hover {
+  background: #c0392b;
+  transform: translateY(-2px);
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 768px) {
+  .diary-editor {
+    padding: 15px;
+  }
+
+  .diary-textarea {
+    min-height: 150px;
+  }
+
+  .editor-actions {
+    flex-direction: column;
+  }
+}

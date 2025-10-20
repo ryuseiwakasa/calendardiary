@@ -1,0 +1,64 @@
+.app {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 20px;
+}
+
+.app-header {
+  text-align: center;
+  color: white;
+  margin-bottom: 30px;
+}
+
+.app-header h1 {
+  font-size: 2.5em;
+  margin: 0 0 10px 0;
+}
+
+.app-header p {
+  font-size: 1.2em;
+  opacity: 0.9;
+  margin: 0;
+}
+
+.app-content {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.calendar-section,
+.editor-section {
+  min-height: 500px;
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 1024px) {
+  .app-content {
+    grid-template-columns: 1fr;
+  }
+
+  .calendar-section {
+    min-height: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .app {
+    padding: 15px;
+  }
+
+  .app-header h1 {
+    font-size: 2em;
+  }
+
+  .app-header p {
+    font-size: 1em;
+  }
+
+  .app-content {
+    gap: 15px;
+  }
+}
